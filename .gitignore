@@ -1,5 +1,5 @@
 # Project structure related
-.classpath
+#.classpath
 .project
 .settings
 .metadata
