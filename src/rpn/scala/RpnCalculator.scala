@@ -8,11 +8,11 @@ class RpnCalculator {
     numbers.push(operand)
   }
 
-  def perform(operator: String): Int = {
-    val operatorHandler = registry.getOperator(operator);
+  def perform(operatorCharacter: String): Int = {
+    val operatorHandler = registry.getOperator(operatorCharacter);
 
     if (operatorHandler == null)
-      throw new IllegalArgumentException("Unknown Operator " + operator)
+      throw new IllegalArgumentException("Unknown Operator " + operatorCharacter)
 
     operatorHandler.performOperation(numbers);
   }
