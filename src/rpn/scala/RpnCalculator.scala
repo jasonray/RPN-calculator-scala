@@ -13,7 +13,7 @@ class RpnCalculator {
 
     val operatorHandler = registry.getOperator(operator);
 
-    if (operatorHandler == null) throw new IllegalArgumentException
+    if (operatorHandler == null) throw new IllegalArgumentException("Unknown Operator " + operator)
 
     operatorHandler.performOperation(numbers);
   }
