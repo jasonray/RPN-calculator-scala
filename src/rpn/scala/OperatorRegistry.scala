@@ -1,8 +1,9 @@
 package rpn.scala
+import rpn.scala.operators.AbsoluteOperator
 
 class OperatorRegistry {
 
-  private val operators = Seq(new AddOperator, new SubtractOperator);
+  private val operators = Seq(new AddOperator, new SubtractOperator, new AbsoluteOperator);
 
   def getOperator(operatorCharacter: String): Operator = {
     var relevantOperator: Operator = null;
