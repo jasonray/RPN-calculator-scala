@@ -9,8 +9,6 @@ class RpnCalculator {
   }
 
   def perform(operator: String): Int = {
-    if (operator == null) throw new IllegalArgumentException
-
     val operatorHandler = registry.getOperator(operator);
 
     if (operatorHandler == null)
