@@ -1,6 +1,6 @@
-package rpn.scala.operators
-import rpn.scala.Operator
-import rpn.scala.RpnStack
+package rpn.operators
+import rpn.operators.Operator
+import rpn.RpnStack
 
 class AbsoluteOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {

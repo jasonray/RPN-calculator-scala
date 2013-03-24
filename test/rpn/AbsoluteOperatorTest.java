@@ -1,4 +1,4 @@
-package rpn.scala;
+package rpn;
 
 import static org.junit.Assert.assertEquals;
 

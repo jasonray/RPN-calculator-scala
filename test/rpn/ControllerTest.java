@@ -1,9 +1,11 @@
-package rpn.scala;
+package rpn;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import rpn.RpnCalculator;
 
 public class ControllerTest {
 	@Test

@@ -1,8 +1,10 @@
-package rpn.scala;
+package rpn;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import rpn.RpnCalculator;
 
 public class AddTest {
 	@Test

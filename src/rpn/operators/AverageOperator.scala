@@ -1,6 +1,5 @@
-package rpn.scala.operators
-import rpn.scala.Operator
-import rpn.scala.RpnStack
+package rpn.operators
+import rpn.RpnStack;
 
 class AverageOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {

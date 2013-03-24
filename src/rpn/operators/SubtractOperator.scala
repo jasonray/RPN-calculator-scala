@@ -1,4 +1,4 @@
-package rpn.scala
+package rpn.operators
 
 class SubtractOperator extends BinaryOperator {
   def doOperation(lhs: Int, rhs: Int): Int = {

@@ -1,10 +1,10 @@
-package rpn.scala
+package rpn
 
 class RpnCalculator {
   private val numbers = new RpnStack
   private val registry = new OperatorRegistry
 
-  def enter(operand: Int): scala.Unit = {
+  def enter(operand: Int): Unit = {
     numbers.push(operand)
   }
 

@@ -1,4 +1,6 @@
-package rpn.scala
+package rpn.operators
+
+import rpn.RpnStack;
 
 abstract class BinaryOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {

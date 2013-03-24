@@ -1,6 +1,8 @@
-package rpn.scala;
+package rpn;
 
 import org.junit.Test;
+
+import rpn.RpnCalculator;
 
 public class UnknownOperationTest {
 	@Test(expected = IllegalArgumentException.class)

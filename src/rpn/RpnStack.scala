@@ -1,4 +1,4 @@
-package rpn.scala
+package rpn
 
 class RpnStack {
   private val numbers = new scala.collection.mutable.Stack[Int]

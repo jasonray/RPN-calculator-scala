@@ -1,8 +1,10 @@
-package rpn.scala;
+package rpn;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import rpn.RpnCalculator;
 
 public class AverageTest {
 	@Test

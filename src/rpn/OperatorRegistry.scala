@@ -1,6 +1,9 @@
-package rpn.scala
-import rpn.scala.operators.AbsoluteOperator
-import rpn.scala.operators.AverageOperator
+package rpn
+import rpn.operators.AddOperator
+import rpn.operators.AverageOperator
+import rpn.operators.SubtractOperator
+import rpn.operators.AbsoluteOperator
+import rpn.operators.Operator
 
 class OperatorRegistry {
 
