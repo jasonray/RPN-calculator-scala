@@ -5,17 +5,17 @@ class OperatorRegistry {
   private val operators = Seq(new AddOperator, new SubtractOperator);
 
   def getOperator(operatorCharacter: String): Operator = {
-    var operatorHandler: Operator = null;
+    var relevantOperator: Operator = null;
 
     if (operatorCharacter != null) {
       operators.foreach {
         operator =>
           if (operator.handlesOperatorCharacter(operatorCharacter))
-            operatorHandler = operator
+            relevantOperator = operator
       }
     }
 
-    return operatorHandler;
+    return relevantOperator;
 
   }
 }
