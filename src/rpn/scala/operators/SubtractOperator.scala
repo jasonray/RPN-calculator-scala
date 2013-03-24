@@ -5,4 +5,8 @@ class SubtractOperator extends BinaryOperator {
     lhs - rhs;
   }
 
+  def handlesOperatorCharacter(operatorCharater: String): Boolean = {
+    return (operatorCharater.contentEquals("-"));
+  }
+
 }
