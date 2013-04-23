@@ -1,27 +1,24 @@
 package rpn.operators
-import rpn.operators.Operator
+
 import rpn.RpnStack
 
 class AbsoluteOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {
-    val n = numbers.pop
-    var result: Int = getAbsolute(n)
-
+    val result: Int = getAbsolute(numbers.pop)
     numbers.push(result)
-    return result
+    result
   }
 
   def handlesOperatorCharacter(operatorCharater: String): Boolean = {
     return (operatorCharater.contentEquals("||"));
   }
 
-  private def getAbsolute(n: Int): Int = {
+  private def getAbsolute(n: Int): Int =
     if (n > 0)
-      return n;
+      n;
     else if (n < 0)
-      return n * -1;
+      n * -1;
     else
-      return 0
-  }
+      0
 
 }

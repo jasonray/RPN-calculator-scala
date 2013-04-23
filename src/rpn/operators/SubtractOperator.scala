@@ -6,7 +6,7 @@ class SubtractOperator extends BinaryOperator {
   }
 
   def handlesOperatorCharacter(operatorCharater: String): Boolean = {
-    return (operatorCharater.contentEquals("-"));
+    operatorCharater.contentEquals("-");
   }
 
 }

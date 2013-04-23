@@ -3,27 +3,27 @@ import rpn.RpnStack;
 
 class AverageOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {
-    var sum: Int = 0;
-    var count: Int = 0;
+    val average = cumlativeCalculateAverage(0, 0, numbers)
 
-    while (!numbers.isEmpty()) {
-      val n: Int = numbers.pop
-      sum += n;
-      count += 1;
-    }
-
-    val average: Int = calculateAverage(sum, count);
     numbers.push(average);
     return average;
   }
 
-  private def calculateAverage(total: Int, count: Int): Int = {
-    if (count == 0) return 0;
-    return total / count;
+  private def cumlativeCalculateAverage(runningTotal: Int, runningCount: Int,  numbers: RpnStack): Int = {
+    if (numbers.isEmpty)
+      calculateAverage(runningTotal, runningCount)
+    else
+      cumlativeCalculateAverage(runningTotal + numbers.pop, runningCount + 1, numbers)
   }
 
-  def handlesOperatorCharacter(operatorCharater: String): Boolean = {
-    return (operatorCharater.contentEquals("AVERAGE") || operatorCharater.contentEquals("AVE"))
+  private def calculateAverage(total: Int, count: Int): Int = {
+    if (count == 0)
+      0;
+    else
+      total / count;
   }
+
+  def handlesOperatorCharacter(operatorCharater: String): Boolean =
+    operatorCharater.contentEquals("AVERAGE") || operatorCharater.contentEquals("AVE")
 
 }
