@@ -9,11 +9,6 @@ class RpnCalculator {
   }
 
   def perform(operatorCharacter: String): Int = {
-    val operatorHandler = registry.getOperator(operatorCharacter);
-
-    if (operatorHandler == null)
-      throw new IllegalArgumentException("Unknown Operator " + operatorCharacter)
-
-    operatorHandler.performOperation(numbers);
+    registry.getOperator(operatorCharacter).performOperation(numbers);
   }
 }
