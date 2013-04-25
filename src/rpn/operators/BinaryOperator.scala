@@ -4,7 +4,9 @@ import rpn.RpnStack;
 
 abstract class BinaryOperator extends Operator {
   def performOperation(numbers: RpnStack): Int = {
-    val result = doOperation(numbers.pop, numbers.pop);
+    val rhs = numbers.pop
+    val lhs = numbers.pop
+    val result = doOperation(lhs, rhs)
     numbers.push(result)
     return result
   }

@@ -4,10 +4,11 @@ import rpn.operators.AverageOperator
 import rpn.operators.SubtractOperator
 import rpn.operators.AbsoluteOperator
 import rpn.operators.Operator
+import rpn.operators.MultiplicationOperator
 
 class OperatorRegistry {
 
-  private val operators = Seq(new AddOperator, new SubtractOperator, new AbsoluteOperator, new AverageOperator);
+  private val operators = Seq(new AddOperator, new SubtractOperator, new AbsoluteOperator, new AverageOperator, new MultiplicationOperator);
 
   def getOperator(operatorCharacter: String): Operator = {
     var relevantOperator: Operator = null;
